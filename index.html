@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organização Weeping Willow</title>
+    <link rel="shortcut icon" href="./Weeping Willow.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <img src="/Weeping Willow.png" alt="Logo da Weeping Willow">
         <nav>
-            <a href="#sobre">Sobre Nós</a>
-            <a href="#flora">Flora</a>
-            <a href="/ongs.html">Fauna</a>
-            <a href="#desastres">Desastres Ambientais</a>
+            <a href="/index.html">Sobre Nós</a>
+            <a href="./ongs-flora.html">Flora</a>
+            <a href="./ongs-fauna.html">Fauna</a>
+            <a href="./ongs-desastres.html">Desastres</a>
         </nav>
     </header>
 
@@ -22,16 +23,26 @@
         <section class="sobre" id="sobre">
             <div>
                 <h2>Sobre a Weeping Willow</h2>
-                <p>Seja bem-vindo e muito obrigado por visitar nosso site!! A weeping willow é uma organiação que espera dar maior visibilidade para ONGs e projetos que buscam ajudar diversas áreas da vida natural.
+                <p>Seja bem-vindo e muito obrigado por visitar nosso site!! A Weeping Willow é uma organização que espera dar maior visibilidade para ONGs e projetos que buscam ajudar diversas áreas da vida natural.
                 Essa iniciativa surgiu através de uma atividade realizada em sala de aula, onde fomos incentivadas a criar um site que abordasse um tema que ajudasse em algum aspecto ambiental.</p>
             </div>
-            <img class="cervo" src="./filhote-de-cervo.avif" alt="Filhote de Cervo">
+            
+            <div class="slideshow">
+                <img class="slides" id="deer" src="./dois-cervos.jpg" alt="Filhote de Cervo">
+                <img class="slides no-display" id="bird" src="./arara-azul.jpg" alt="Arara Azul">
+                <img class="slides no-display" id="palm"src="./tropical.jpg" alt="Floresta Tropical">
+                <div>
+                    <button onclick="Deer()">1</button>
+                    <button onclick="Bird()">2</button>
+                    <button onclick="Palm()">3</button>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <div>
-            <img class="logo-footer" src="./instagram+bw+logo+icon.png" alt="Instagram Logo">
+            <img class="logo-footer" src="./insta-icon.png" alt="Instagram Logo">
             <a href="">Instagram</a>
         </div>
         <div>
@@ -40,5 +51,35 @@
         </div>
     </footer>
 
+    <script>
+        let Ppalm = document.querySelector('#palm')
+        let Bbird = document.querySelector('#bird')
+        let Ddeer = document.querySelector('#deer')
+        
+        function Bird(){           
+            Bbird.classList.add("display-on")
+            Ddeer.classList.remove("display-on")
+            Ppalm.classList.remove("display-on")
+            Ddeer.classList.add("no-display")
+            Ppalm.classList.add("no-display")
+        }
+
+        function Deer(){    
+            Ddeer.classList.add("display-on") 
+            Bbird.classList.remove("display-on")
+            Ppalm.classList.remove("display-on")
+            Bbird.classList.add("no-display")
+            Ppalm.classList.add("no-display")
+            
+        }
+
+        function Palm(){         
+            Ppalm.classList.add("display-on")
+            Bbird.classList.remove("display-on")
+            Ddeer.classList.remove("display-on")
+            Bbird.classList.add("no-display")
+            Ddeer.classList.add("no-display")                     
+        }
+    </script>
 </body>
 </html>
