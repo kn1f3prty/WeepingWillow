@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg: #ffffff;
+    --footer: #f1d8af;
+    --brown: #594A3C;
+    --font: #1d0f02;
+    --header-bg: #f1e5d6;
+    --detail: #d3a877;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+}
+
+header {
+    background-color: var(--header-bg);
+    border-bottom: var(--brown) solid 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+}
+
+header img {
+    width: 275px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 28px;
+    color: var(--font);
+    padding: 22px;
+    border-radius: 32px;
+    background-color: var(--detail);
+    margin-left: 32px;
+    transition: 0.25s; 
+}
+
+header nav a:hover {
+    background-color: var(--brown);
+    color: var(--bg)
+}
+
+h2, p, a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+main p {
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+main {
+    width: 65%;
+    padding: 64px;
+    margin: auto;
+    background-color: var(--header-bg);
+}
+
+main .sobre {
+    display: flex;
+}
+
+main img {
+    width: 180px;
+}
+
+main .cervo {
+    border-radius: 8px;
+    width: 45%;
+}
+
+main .flora {
+    display: flex;
+    margin-top: 64px;
+}
+
+main .flora div {
+    width: 95%;
+    text-align: center;
+    margin-right: 32px;
+    padding: 16px;
+    border-radius: 8px;
+    border: var(--brown) solid 2px;
+    background-color: var(--footer);
+}
+
+main .flora div a {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+main .flora .save-brasil {
+    width: 150px;
+} 
+
+main .flora img {
+}
+
+footer {
+    background-color: var(--footer);
+    padding: 32px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 20px;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+
+}
+
+footer a, footer .email, a {
+    color: var(--font);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.logo-footer {
+    width: 50px;
+    margin: 0 16px;
+    
+}
+
+footer a:hover, footer .email:hover, a:hover  {
+    background-color: var(--detail);
+    font-weight: bold;
+}
